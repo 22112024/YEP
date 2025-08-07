@@ -14,118 +14,82 @@
 
   <!-- BODY -->
   <body class="bg-gray-50 text-gray-800">
-    <!-- HEADER -->
-    <header class="p-5 bg-white grid grid-cols-[1fr_auto_1fr] items-center">
-      <div class="justify-self-start">
-        <a href="home.html"
-          ><img src="img/logo.svg" alt="Logo" class="h-10"
-        /></a>
+<!-- HEADER -->
+<header class="p-5 bg-white grid grid-cols-[1fr_auto_1fr] items-center">
+  <div class="justify-self-start">
+    <a href="home.html">
+      <img src="img/logo.svg" alt="Logo" class="h-10" />
+    </a>
+  </div>
+
+  <!-- Переключатель типа встречи -->
+  <div class="flex justify-self-center border border-sky-500 rounded-full space-x-0.5 p-[0.1rem]">
+    <button
+      class="flex items-center justify-center h-8 w-14 px-2 text-sm font-medium rounded-full shadow bg-sky-500 hover:bg-blue-500 active:bg-blue-500 transition-all duration-200"
+      data-type="pair"
+    >
+      <img src="img/pair.svg" alt="Pair" class="h-4" />
+    </button>
+    <button
+      class="flex items-center justify-center h-8 w-12 px-2 text-sm font-medium rounded-full transition hover:bg-gray-100"
+      data-type="group"
+    >
+      <img src="img/group.svg" alt="Group" class="h-4" />
+    </button>
+  </div>
+
+  <!-- Навигационное меню -->
+  <div class="flex justify-self-end gap-4">
+    <!-- Аккаунт -->
+    <a
+      href="account.html"
+      class="flex relative group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
+    >
+      <img src="img/account.svg" alt="Account" class="h-[1rem] filter brightness-0 saturate-0 opacity-70" />
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10">
+        Аккаунт
+        <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
       </div>
-      <div
-        class="flex justify-self-center border border-1 border-sky-500 rounded-full space-x-0.5 p-[0.1rem]"
-      >
-        <button
-          class="flex items-center justify-center h-8 w-14 px-2 py-[0.1rem] text-sm font-medium rounded-full transition shadow bg-sky-500 hover:bg-blue-500 active:bg-blue-500 transition-all duration-200"
-          data-type="pair"
-        >
-          <img
-            src="img/pair.svg"
-            alt="Pair"
-            class="h-4 whitescale brightness-10"
-          />
-        </button>
-        <button
-          class="flex items-center justify-center h-8 w-12 px-2 py-[0.1rem] text-sm font-medium rounded-full transition"
-          data-type="group"
-        >
-          <img
-            src="img/group.svg"
-            alt="Group"
-            class="h-4 bluescale brightness-1"
-          />
-        </button>
+    </a>
+
+    <!-- Сообщения -->
+    <a
+      href="messages.html"
+      class="flex relative group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
+    >
+      <img src="img/messages.svg" alt="Messages" class="h-[0.8rem] filter brightness-0 saturate-0 opacity-70" />
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10">
+        Сообщения
+        <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
       </div>
-      <div class="flex justify-self-end gap-4">
-        <!-- Аккаунт -->
-        <button
-          class="flex relative inline-block group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
-          onclick="openFilterMenu()"
-        >
-          <img
-            src="img/account.svg"
-            alt="Account"
-            class="h-[1rem] filter brightness-0 saturate-0 opacity-70"
-          />
-          <div
-            class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10"
-          >
-            Аккаунт
-            <div
-              class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"
-            ></div>
-          </div>
-        </button>
-        <!-- Сообщение -->
-        <a href="messages.html">
-          <button
-            class="flex relative inline-block group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
-            onclick="openFilterMenu()"
-          >
-            <img
-              src="img/messages.svg"
-              alt="Messages"
-              class="h-[0.8rem] filter brightness-0 saturate-0 opacity-70"
-            />
-            <div
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10"
-            >
-              Сообщения
-              <div
-                class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"
-              ></div>
-            </div>
-          </button>
-        </a>
-        <!-- Мои встречи -->
-        <button
-          class="flex relative inline-block group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
-          onclick="openFilterMenu()"
-        >
-          <img
-            src="img/meets.svg"
-            alt="Meetings"
-            class="h-[1.1rem] filter brightness-0 saturate-0 opacity-70"
-          />
-          <div
-            class="absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10"
-          >
-            Мои встречи
-            <div
-              class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"
-            ></div>
-          </div>
-        </button>
-        <!-- Создать событие -->
-        <button
-          class="flex relative inline-block group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
-          onclick="openFilterMenu()"
-        >
-          <img
-            src="img/create.svg"
-            alt="Create"
-            class="h-[1.1rem] filter brightness-0 saturate-0 opacity-70"
-          />
-          <div
-            class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10"
-          >
-            Создать событие
-            <div
-              class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"
-            ></div>
-          </div>
-        </button>
+    </a>
+
+    <!-- Мои встречи -->
+    <a
+      href="meetings.html"
+      class="flex relative group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
+    >
+      <img src="img/meets.svg" alt="Meetings" class="h-[1.1rem] filter brightness-0 saturate-0 opacity-70" />
+      <div class="absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10">
+        Мои встречи
+        <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
       </div>
-    </header>
+    </a>
+
+    <!-- Создать событие -->
+    <a
+      href="create_event.html"
+      class="flex relative group items-center justify-center border border-dashed border-gray-800 rounded-full h-10 w-10 p-1 hover:bg-gray-100"
+    >
+      <img src="img/create.svg" alt="Create" class="h-[1.1rem] filter brightness-0 saturate-0 opacity-70" />
+      <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition pointer-events-none z-10">
+        Создать событие
+        <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+      </div>
+    </a>
+  </div>
+</header>
+
 
     <!--MAIN-->
     <main class="p-4 space-y-5">
@@ -1498,3 +1462,4 @@
     -->
   </body>
 </html>
+
