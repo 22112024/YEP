@@ -13,7 +13,7 @@
   </head>
 
   <!-- BODY -->
-  <body class="bg-white text-gray-800">
+  <body class="bg-gray-50 text-gray-800">
 <!-- HEADER -->
 <header class="p-5 bg-white grid grid-cols-[1fr_auto_1fr] items-center">
   <div class="justify-self-start">
@@ -885,13 +885,14 @@
             class="relative bg-white p-4 rounded-xl border-2 border-amber-500 shadow-sd hover:shadow-md active:shadow-md"
           >
             <!-- Gallery карточки -->
-            <div class="relative">
-              <img
-                src="img/girl10.jpg"
-                alt="Фото"
-                class="rounded-xl aspect-[4/4] object-cover mb-2"
-              />
-            </div>
+<div class="relative overflow-hidden">
+  <img
+    src="img/girl10.jpg"
+    alt="Фото"
+    class="rounded-xl aspect-[4/4] object-cover mb-2 transition-transform duration-300 hover:scale-110"
+  />
+</div>
+
 
             <!-- Body карточки -->
             <h2 class="text-mg font-semibold text-gray-600">Алина, 24</h2>
